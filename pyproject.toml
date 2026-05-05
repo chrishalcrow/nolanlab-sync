@@ -1,0 +1,27 @@
+[project]
+name = "nolanlab-sync"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "chrishalcrow", email = "chrishalcrow@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "matplotlib>=3.10.9",
+    "nolanlab-ephys",
+    "numpy>=2.4.4",
+    "pynapple>=0.11.0",
+    "scipy>=1.17.1",
+    "spikeinterface>=0.104",
+]
+
+[project.scripts]
+nolanlab-sync = "nolanlab_sync:main"
+
+[build-system]
+requires = ["uv_build>=0.9.26,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+nolanlab-ephys = { git = "https://github.com/MattNolanLab/nolanlab-ephys" }
